@@ -20,7 +20,7 @@ public class ClassUsuarioImp implements Iusuario {
 			em.getTransaction().begin();
 			user = em
 					.createQuery(
-							"SELECT u FROM TblUsuariocl2 u WHERE u.usuariocl2 = :usuario AND u.passwordcl2 = :password",
+							"SELECT u FROM TblUsuariocl3 u WHERE u.usuariocl3 = :usuario AND u.passwordcl3 = :password",
 							TblUsuariocl3.class)
 					.setParameter("usuario", usuario).setParameter("password", password).getSingleResult();
 			em.getTransaction().commit();

@@ -12,6 +12,8 @@ public interface Iproducto {
 		public void ActualizarProducto(TblProductocl3 producto);
 
 		public void EliminarProducto(TblProductocl3 producto);
+		
+		public TblProductocl3 BuscarProducto(TblProductocl3 cliente);
 
 		public List<TblProductocl3> ListadoProducto();
 		
