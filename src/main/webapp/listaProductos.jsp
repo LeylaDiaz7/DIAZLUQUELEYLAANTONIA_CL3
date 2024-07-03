@@ -10,6 +10,24 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Listado de Productos</title>
+
+<style>
+    .tabla-header {
+        background-color: #6699CC;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .tabla-productos {
+        margin: 20px auto;
+        border: 2px solid #000;
+        border-collapse: collapse;
+        width: 80%;
+        text-align: center;
+    }
+    
+</style>
+
 </head>
 
 <body bgcolor="#ce5dec9">
@@ -21,15 +39,16 @@
 <h2 align="center"> <a href="index.jsp" style="text-decoration:none ; color:blue;">Volver al Index</a>
 </h2>
 
-<table border="2" align="center">
+<table class="tabla-productos" border="2" align="center">
 
-		<tr>
+		<tr class="tabla-header">
 			<td>ID</td>
 			<td>NOMBRE</td>
 			<td>PRECIO VENTA</td>
 			<td>PRECIO COMPRA</td>
 			<td>ESTADO</td>
 			<td>DESCRIPCIÓN</td>
+			<td colspan="2" align="center">ACCIONES</td>
 		</tr>
 
 		<%
@@ -49,8 +68,10 @@
 				<td><%=lis.getPreciocompcl3()%></td>
 				<td><%=lis.getEstadocl3()%></td>
 				<td><%=lis.getDescripcl3()%></td>
-				<td><a href="ControladorProducto?accion=Eliminar&id=<%=lis.getIdproductoscl3()%>">Eliminar</a></td>
-				<td><a href="ControladorProducto?accion=Modificar&id=<%=lis.getIdproductoscl3()%>">Actualizar</a></td>
+				<td><a href="ControladorProducto?accion=Eliminar&id=<%=lis.getIdproductoscl3()%>">
+				<img src="Eliminar.png" style="width: 25px; height: 25px;">Eliminar</a></td>
+				<td><a href="ControladorProducto?accion=Modificar&id=<%=lis.getIdproductoscl3()%>">
+				<img src="Actualizar.png" style="width: 25px; height: 25px;">Actualizar</a></td>
 			</tr>
 			<%
 			} //fin del bucle for...
